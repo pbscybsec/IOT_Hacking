@@ -1,18 +1,6 @@
-# ESP32 Home Automation Web Server
-
+# Level 3 Attack
+In level 3, we will raise the level of security by encrypting user credentials, preventing attackers from exploiting them. However, in this case, the attacker will utilize the Fiddler tool for packet capturing and has the ability to replay the captured packet; specifically, the attacker will repeat the packet used to control the smart led.
 This project sets up a web server on an ESP32 device for controlling GPIO pins via a web interface with authentication. It's ideal for simple home automation tasks, allowing users to control devices connected to the ESP32's GPIO pins remotely within a local network.
-
-## Features
-
-- **Secure Access:** Web-based authentication to ensure only authorized users can control connected devices.
-- **GPIO Control:** Toggle GPIO pins (e.g., lights, relays) through the web interface.
-- **Multi-Device Support:** Control multiple devices connected to predefined GPIO pins.
-- **Easy Integration:** Can be integrated into existing home automation systems.
-
-## Hardware Requirements
-
-- ESP32 Development Board
-- Devices (LEDs, relays, etc.) connected to GPIO pins
 
 ## Software Dependencies
 
@@ -35,7 +23,6 @@ This project sets up a web server on an ESP32 device for controlling GPIO pins v
    - Once the ESP32 is connected to your WiFi network, use a web browser to navigate to the ESP32's IP address.
 
 ## Code Overview
-
 ### Authentication
 
 - The `is_authentified()` function checks for a specific cookie to verify if the user is authenticated.
@@ -54,7 +41,3 @@ This project sets up a web server on an ESP32 device for controlling GPIO pins v
 ## Example Usage
 
 After logging in, users can control connected devices via the web interface. Each device corresponds to a button on the web page that sends a request to the ESP32 to toggle the state of the connected GPIO pin.
-
-## Security Note
-
-This example uses simple authentication and is not encrypted. For production environments, consider implementing HTTPS and more robust authentication methods.
